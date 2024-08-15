@@ -38,7 +38,9 @@ public class ActionsDemo {
         // @class='goxjub']"));
 
         WebElement el2 = driver.findElement(By.className("YmvwI"));
-        Assert.
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("YmvwI")));
+
+        System.out.println(el2.isDisplayed());
 
         // driver.quit();
     }
