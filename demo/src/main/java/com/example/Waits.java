@@ -16,7 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Main {
+public class Waits {
     public static void main(String[] args) {
         WebDriver driver = WebDriverManager.chromedriver().create();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // Implicit
