@@ -43,5 +43,6 @@ public class WindowHandling {
         driver.switchTo().window(parent);
         System.out.println(driver.findElement(By.className("lnXdpd")).isDisplayed());
         driver.quit();
+        driver.switchTo().frame(el);
     }
 }
