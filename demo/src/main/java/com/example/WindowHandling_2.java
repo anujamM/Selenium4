@@ -4,6 +4,7 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -33,6 +34,8 @@ public class WindowHandling_2 {
         // wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath("(//a[@class='pHiOh'])[2]"))));
 
         WebElement footerDiv = driver.findElement(By.className("KxwPGc AghGtd"));
+        wait.until(ExpectedConditions.visibilityOfElementLocated((By.className("KxwPGc AghGtd"))));
+
         System.out.println(footerDiv.findElement(By.tagName("a")).getSize());
 
 
