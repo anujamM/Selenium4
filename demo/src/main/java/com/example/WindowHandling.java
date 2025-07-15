@@ -30,7 +30,8 @@ public class WindowHandling {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@class='RNmpXc'])[2]")));
 
         Actions actions = new Actions(driver);
-        actions.keyDown(Keys.COMMAND).click(el).keyUp(Keys.CONTROL).build().perform();
+        // Hold down CONTROL while clicking to open the link in a new window/tab
+        actions.keyDown(Keys.CONTROL).click(el).keyUp(Keys.CONTROL).build().perform();
 
         Set<String> windows = driver.getWindowHandles();
         Iterator<String> itr = windows.iterator();
@@ -43,6 +44,5 @@ public class WindowHandling {
         driver.switchTo().window(parent);
         System.out.println(driver.findElement(By.className("lnXdpd")).isDisplayed());
         driver.quit();
-        driver.switchTo().frame(el);
     }
 }
