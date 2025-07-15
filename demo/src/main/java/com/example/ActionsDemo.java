@@ -26,11 +26,11 @@ public class ActionsDemo {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.manage().window().maximize();
 
-        WebElement el = driver.findElement((By.id("APjFqb")));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("APjFqb")));
+        WebElement el = driver.findElement((By.id("APjFqb")));
 
         Actions act = new Actions(driver);
-        System.out.println(el.isDisplayed());
+        // System.out.println(el.isDisplayed());
         act.moveToElement(el).click().sendKeys("ANUJAM").doubleClick().build().perform();
         act.sendKeys(Keys.ENTER).build().perform();
 
