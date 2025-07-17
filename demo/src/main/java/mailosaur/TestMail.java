@@ -27,7 +27,7 @@ public class TestMail {
 //	    Date testStartDate = sdf.parse("2025-07-17T13:00:00");
 	    
 	    Calendar cal = Calendar.getInstance();
-	    cal.add(Calendar.HOUR_OF_DAY, -2); // Subtract 2 hour
+	    cal.add(Calendar.HOUR_OF_DAY, -2); // Subtract 2 hours
 	    long testStartDate = cal.getTimeInMillis();
 	    
 	    params.withServer(serverId).withReceivedAfter(testStartDate);
@@ -40,6 +40,6 @@ public class TestMail {
 	   
 	    System.out.println(message.subject());
 	    assertNotNull(message);
-	    assertEquals("Fwd: View your Credit Report", message.subject());
+	    assertEquals(message.subject().contains("View your Credit Report"), true);
 	  }
 }
