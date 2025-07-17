@@ -33,5 +33,11 @@
             <artifactId>webdrivermanager</artifactId>
             <version>5.8.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.mailosaur/mailosaur-java -->
+		<dependency>
+    	<groupId>com.mailosaur</groupId>
+    	<artifactId>mailosaur-java</artifactId>
+    	<version>8.3.0</version>
+		</dependency>
     </dependencies>
 </project>
