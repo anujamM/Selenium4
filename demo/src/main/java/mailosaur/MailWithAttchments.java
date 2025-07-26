@@ -2,6 +2,7 @@ package mailosaur;
 
 import java.io.IOException;
 import java.util.Calendar;
+import java.util.List;
 
 import org.testng.annotations.Test;
 
@@ -28,11 +29,14 @@ public class MailWithAttchments extends BaseTestEMail{
 		//Mail with attachments:
 	    System.out.println(message.attachments().size());
 	    
-	    Attachment firstAttachment = message.attachments().get(0);
-	    System.out.println(firstAttachment.fileName());
-	    System.out.println(firstAttachment.content());
-		
+	    List<Attachment> attachments = message.attachments();
+	    
+	    for(Attachment attach : attachments) {
+	    	System.out.println(attach.fileName());
+		    System.out.println(attach.content());
+		    System.out.println(attach.contentId());
+		    System.out.println(attach.contentType());
+	    }
 	}
-    
 
 }
